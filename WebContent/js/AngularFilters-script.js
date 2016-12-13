@@ -2,6 +2,10 @@
  * 
  */
 
+/**
+ * 
+ */
+
 (function(){
 	
 	var app = angular.module("githubViewer", []);
@@ -18,16 +22,17 @@
 			$scope.repos = response.data; // can also use $scope.user.repos = response.data
 		};
 		
-		var OnError = function(reason){
+		var onError = function(reason){
 			$scope.error = "Could not fetch the data";
 		};
 		
 		$scope.search = function(username){
 			$http.get("https://api.github.com/users/"+username)
-				.then(onUserComplete, OnError);
+				.then(onUserComplete, onError);
 		};
 		$scope.username = "angular";
 		$scope.message = "Github Viewer";
+		$scope.repoSortOrder = "-stargazers_count";
 		
 	};
 	
