@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="ISO-8859-1">
+<head>
+	<script src="../js/angular.js" type="text/javascript"></script>
+	<script src="../js/AngularController-script.js" type="text/javascript"></script>
+	<title>Angular JS Demo</title>
+</head>
+<body ng-controller ="MainController">
+	<h1>{{ message }}</h1>
+	length : {{message.length}}
+	
+	<div>
+		<div> First Name: {{person.firstName}}</div>
+		<div> Last Name: {{person.lastName}}</div>
+		<div> 
+			<img ng-src = "{{person.imageSrc}}" title = "{{person.firstName}} {{person.lastName}}" /> 
+		</div>
+	</div>
+</body>
+</html>
