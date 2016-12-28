@@ -1,6 +1,6 @@
-
-<div id = "userDetails">
+<div>
 	<h2>{{user.name}}</h2>
+	{{ error }}
 	<img ng-src = "{{user.avatar_url}}" title = "{{user.data}}" /> 
 	
 	Order:
@@ -10,7 +10,7 @@
 		<option value="+language">Language</option>
 	</select>
 		
-</div>
+
 		
 <table> 
 	<thead>
@@ -28,3 +28,5 @@
 		 </tr>
 	</tbody>
 </table>
+
+</div>
