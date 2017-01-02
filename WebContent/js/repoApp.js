@@ -10,10 +10,10 @@
 				controller: "MainController"
 			})
 			.when("/user/:username",{
-				templateUrl: "user.html",
+				templateUrl: "repoUser.html",
 				controller: "UserController"
 			})
-			.when("/user/:username/:reponame",{
+			.when("/repo/:username/:reponame",{
 				templateUrl: "repo.html",
 				controller: "RepoController"
 			})
